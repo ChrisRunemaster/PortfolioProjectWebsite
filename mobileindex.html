@@ -40,22 +40,35 @@
 							<a href="#aboutMe" data-transition="pop" data-theme="a" data-icon="info"> About Me </a>
 						</li>
 						<li>
-							<a href="#contactMe" data-transition="fade" data-theme="a" data-icon="star"> Contact Me </a>
+							<a href="#contactMe" data-transition="pop" data-theme="a" data-icon="star"> Contact Me </a>
 						</li>
 					</ul>
 				</div>
+				<!-- Picture buttons.. -->
 				<a href="#projects">
 				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-					<img src="img/Project288.png" alt="image">
+					<img src="img/Project288.png" href="#projects" alt="image">
 				</div> </a>
 				<a href="#services">
 				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-					<img src="http://codiqa.com/static/images/v2/image.png" alt="image">
+					<img src="img/Services288.png" alt="image">
 				</div> </a>
+				<a href="https://twitter.com/ChrisRunemaster" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @ChrisRunemaster</a>
+				<script>
+					! function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+						if (!d.getElementById(id)) {
+							js = d.createElement(s);
+							js.id = id;
+							js.src = p + '://platform.twitter.com/widgets.js';
+							fjs.parentNode.insertBefore(js, fjs);
+						}
+					}(document, 'script', 'twitter-wjs');
+				</script>
 			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3> © C Rooney 2013 </h3>
-				<a data-role="button" data-theme="a" href="#page1" class="ui-btn-right"> Full Site </a>
+				<a data-role="button" data-theme="a" href="index.html" class="ui-btn-right"> Full Site </a>
 			</div>
 		</div>
 
@@ -80,7 +93,7 @@
 							class="ui-btn-active ui-state-persist"> About Me </a>
 						</li>
 						<li>
-							<a href="#contactMe" data-transition="fade" data-theme="a" data-icon="star"> Contact Me </a>
+							<a href="#contactMe" data-transition="pop" data-theme="a" data-icon="star"> Contact Me </a>
 						</li>
 					</ul>
 				</div>
@@ -99,7 +112,7 @@
 		<div data-role="page" id="contactMe">
 			<div data-theme="a" data-role="header">
 				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-					<img src="img/companylogo.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+					<img src="img/companylogo.png" alt="image">
 				</div>
 
 				<!-- Contact Me Page Mobile -->
@@ -116,14 +129,17 @@
 							<a href="#aboutMe" data-transition="pop" data-theme="a" data-icon="info"> About Me </a>
 						</li>
 						<li>
-							<a href="#contactMe" data-transition="fade" data-theme="a" data-icon="star"
+							<a href="#contactMe" data-transition="pop" data-theme="a" data-icon="star"
 							class="ui-btn-active ui-state-persist"> Contact Me </a>
 						</li>
 					</ul>
 				</div>
 				<a data-role="button" data-theme="a" href="tel:7057703375"> Call me!! </a>
+
 				<img src="https://maps.googleapis.com/maps/api/staticmap?center=Barrie, On&amp;zoom=14&amp;size=288x200&amp;markers=Barrie, Ontario&amp;sensor=false"
 				height="200" width="288">
+
+				<!-- Here's the contact me form. -->
 				<form action="">
 					<div data-role="fieldcontain">
 						<label for="textinput1"> Your Name </label>
@@ -149,6 +165,52 @@
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3> © C Rooney 2013 </h3>
 			</div>
-		</div>
+
+			<!-- Projects Page. -->
+			<div data-role="page" id="projects">
+				<div data-theme="a" data-role="header">
+					<h3> Projects </h3>
+				</div>
+				<div data-role="navbar" data-iconpos="top">
+					<ul>
+						<li>
+							<a href="#home" data-transition="pop" data-theme="a" data-icon="home"> Back to Home </a>
+						</li>
+						<li>
+							<a href="#aboutMe" data-transition="pop" data-theme="a" data-icon="info"> About Me </a>
+						</li>
+						<li>
+							<a href="#contactMe" data-transition="pop" data-theme="a" data-icon="star"> Contact Me </a>
+						</li>
+					</ul>
+				</div>
+				<div data-role="content">
+					<h3> Some things I've worked on.. </h3>
+					<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+						<div data-role="collapsible">
+							<h3> Lucky Chan: A PHP Image Board! </h3>
+							<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+								<img src="http://codiqa.com/static/images/v2/image.png" alt="image">
+							</div>
+						</div>
+						<div data-role="collapsible" data-collapsed="false">
+							<h3> Databases! </h3>
+							<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+								<img src="http://codiqa.com/static/images/v2/image.png" alt="image">
+							</div>
+						</div>
+						<div data-role="collapsible">
+							<h3> Rapid Application Development! </h3>
+							<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+								<img src="http://codiqa.com/static/images/v2/image.png" alt="image" >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-theme="a" data-role="footer" data-position="fixed">
+					<h3> © C Rooney 2013 </h3>
+				</div>
+
+			</div>
 	</body>
 </html>
