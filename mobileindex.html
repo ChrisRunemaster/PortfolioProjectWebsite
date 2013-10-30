@@ -51,38 +51,31 @@
 					</ul>
 				</div>
 				<!-- Picture buttons.. -->
-				<a href="#projects">
+				<a href="#projects" data-transition="pop">
 				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
 					<img src="img/Project288.png" href="#projects" alt="image">
 				</div> </a>
-				<a href="#services">
+				<a href="#services" data-transition="pop">
 				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
 					<img src="img/Services288.png" alt="image">
 				</div> </a>
 
+				<!-- The Slider -->
 				<div class="slider">
 					<ul class="slides">
 						<li class="slide">
-							<div class="box" style="background-color: #1abc9c;"></div>
+							<a href="#projects" data-transition="pop"><img src="img/Project288.png" alt="Image Slide 1" /></a>
 						</li>
 						<li class="slide">
-							<div class="box" style="background-color: #16a085;"></div>
+							<a href="#projects" data-transition="pop"><img src="img/database288.png" alt="Image Slide 2" /></a>
 						</li>
 						<li class="slide">
-							<div class="box" style="background-color: #f1c40f;"></div>
-						</li>
-						<li class="slide">
-							<div class="box" style="background-color: #f39c12;"></div>
-						</li>
-						<li class="slide">
-							<div class="box" style="background-color: #d35400;"></div>
-						</li>
-						<li class="slide">
-							<div class="box" style="background-color: #c0392b;"></div>
+							<a href="#services" data-transition="pop"><img src="img/Services288.png" alt="Image Slide 3" /></a>
 						</li>
 					</ul>
 				</div>
 
+				<!-- Initializing the Slider... -->
 				<script>
 					$('.slider').glide();
 				</script>
@@ -131,11 +124,23 @@
 						</li>
 					</ul>
 				</div>
-				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-					<img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+				<h4>I'm just a Junior Programmer and Web Developer, looking to learn, have fun, and make his mark upon the Industry.</h4>
+				<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+					<div data-role="collapsible">
+						<h3> About Me... </h3>
+						<p>
+							I like to play video games, read books, and surf the Internet. All in all, that makes me a pretty simple guy. I also enjoy music and I like to travel.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3> CV </h3>
+						<p>
+							Experience in web development, including backdoor technologies such as PHP and SQL. Experience in programming in the languages Java and C#. Experience in deploying, planning, and setting up networks.
+						</p>
+					</div>
 				</div>
-				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-					<img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+				<div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+					<img src="img/MiniMe.png" alt="image" >
 				</div>
 			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
@@ -168,6 +173,7 @@
 						</li>
 					</ul>
 				</div>
+				<!-- No clue why you want my phone number, but sure. -->
 				<a data-role="button" data-theme="a" href="tel:7057703375"> Call me!! </a>
 
 				<img src="https://maps.googleapis.com/maps/api/staticmap?center=Barrie, On&amp;zoom=14&amp;size=288x200&amp;markers=Barrie, Ontario&amp;sensor=false"
@@ -195,6 +201,7 @@
 					</div>
 					<input data-theme="a" value="Submit" type="submit">
 				</form>
+				<p>Wanna keep in touch? Follow me on <a href="https://twitter.com/ChrisRunemaster">Twitter.</a></p>
 			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3> © C Rooney 2013 </h3>
@@ -221,38 +228,92 @@
 			</div>
 			<div data-role="content">
 				<h3> Some things I've worked on.. </h3>
+
+				<a href="http://webdesign4.georgianc.on.ca/~200225741/luckyChannel/index.php">
+				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+					<img src="img/Project288.png" alt="image">
+				</div> </a>
+				<p>
+					A PHP based image board.
+				</p>
+
+				<h3> Databases! </h3>
+
+				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+					<img src="img/database288.png" alt="image">
+				</div>
+
+				<p>
+					Advanced Databases; check here for MySQL goodies!
+				</p>
+
+				<h3> Rapid Application Development! </h3>
+				<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
+					<img src="img/rapidapp288.png" alt="image" >
+				</div>
+				<p>
+					Rapid Application Development; check here for C# goodies!
+				</p>
+
+			</div>
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<h3> © C Rooney 2013 </h3>
+			</div>
+		</div>
+
+		<!-- Services Page -->
+
+		<div data-role="page" id="services">
+			<div data-theme="a" data-role="header">
+				<h3> Services </h3>
+			</div>
+			<div data-role="navbar" data-iconpos="top">
+				<ul>
+					<li>
+						<a href="#home" data-transition="pop" data-theme="a" data-icon="home"> Back to Home </a>
+					</li>
+					<li>
+						<a href="#aboutMe" data-transition="pop" data-theme="a" data-icon="info"> About Me </a>
+					</li>
+					<li>
+						<a href="#contactMe" data-transition="pop" data-theme="a" data-icon="star"> Contact Me </a>
+					</li>
+				</ul>
+			</div>
+			<div data-role="content">
+				<h3> The Services I Offer... </h3>
+
 				<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
-					<div data-role="collapsible" data-collapsed="false">
-						<h3> Lucky Chan: A PHP Image Board! </h3>
-						<a href="http://webdesign4.georgianc.on.ca/~200225741/luckyChannel/index.php">
-						<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-							<img src="img/Project288.png" alt="image">
-						</div> </a>
+					<div data-role="collapsible">
+						<h3> Programming </h3>
 						<p>
-							A PHP based image board.
-						</p>
-					</div>
-					<div data-role="collapsible" >
-						<h3> Databases! </h3>
-
-						<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-							<img src="img/database288.png" alt="image">
-						</div>
-
-						<p>
-							Advanced Databases; check here for MySQL goodies!
+							I have experience in programming applications with Java, C# (Objective C), and Python.
 						</p>
 					</div>
 					<div data-role="collapsible">
-						<h3> Rapid Application Development! </h3>
-						<div style="width: 288px; height: 100px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-							<img src="img/rapidapp288.png" alt="image" >
-						</div>
+						<h3> Web Development </h3>
 						<p>
-							Rapid Application Development; check here for C# goodies!
+							I have experience in using web development languages such as HTML, CSS, Jquery, PHP, and MySQL.
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3> Networking </h3>
+						<p>
+							I have experience in setting up networking technologies, some of which include: Setting up Routers, switches, and hubs.
+							I've also crimped CAT5 and CAT6 cables. In addition to that, I've set up network devices in a work environment, this included
+							a device which allowed a user to cut off power to something plugged into it (Similar to flicking the switch on a power bar) with
+							a browser. 
+						</p>
+					</div>
+					<div data-role="collapsible">
+						<h3> Computer Maintenance </h3>
+						<p>
+							I have experience in dealing with everyday computer annoyances. Plenty of years of repairing my friend's and parents' computers
+							has resulted in an amount of self-taught know-how (And a bit a Google-fu!). In other words, lots of I.T work.
 						</p>
 					</div>
 				</div>
+
 			</div>
 			<div data-theme="a" data-role="footer" data-position="fixed">
 				<h3> © C Rooney 2013 </h3>
