@@ -79,13 +79,19 @@
 
 				<div class="row">
 					<div class="large-8 columns">
-						<h4>This is a content section.</h4>
+						<h4>Personal Business Contacts</h4>
 						<p>
-							Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
+							Here is a password protected form in which one can look at my personal business contacts. No peeking!
 						</p>
-						<p>
-							Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-						</p>
+						
+						<form name="loginform" method="post" action="checklogin.php">
+							<p>Username:</p><input name="username" type="text" id="username">
+							
+							<p>Password:</p><input name="password" type="password" id="password">
+							
+							<input type="submit" name="submit" value="submit">
+							
+						</form>
 
 					</div>
 
