@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<?php
-		require_once (connectvars . php);
+		require_once("connectvars.php");
 		?>
 		<div class="row">
 			<div class="large-12 columns">

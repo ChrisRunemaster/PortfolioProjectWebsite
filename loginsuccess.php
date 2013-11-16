@@ -1,17 +1,18 @@
 <?php
 //Is our user authorized to view this page?
-//If he is, it's fair game for him to be allowed in.
-//Otherwise, kick him right back to the login page!
-session_start();
+//If he is, he's allowed to be in.
+//Otherwise, kick him right back to the unauthorized page!
 
-if (!session_is_registered(username)) {
+session_start();
+require_once("authorize.php");
+/*if (!session_is_registered(username)) {
 	header("location:login.php");
-}
-require_once(connectvars.php);
+}*/
+require_once("connectvars.php");
 $table_name = portfolio_contacts;
-$dbc = mysqli_connect("$DB_HOST","$DB_USER",
-            "$DB_PASSWORD");
-mysqli_select_db('$DB_NAME') or die("Can't select the Database.");
+$dbc = mysqli_connect(DB_HOST,DB_USER,
+            DB_PASSWORD, DB_NAME);
+//mysqli_select_db("$DB_NAME", ) or die("Can't select the Database.");
 ?>
 
 <!DOCTYPE html>
@@ -26,11 +27,13 @@ mysqli_select_db('$DB_NAME') or die("Can't select the Database.");
 		<br />
 		<p>Please forgive me for the barebones look of this page. It's completely hidden from the public eye if that helps my case!</p>
 		<p>
-							Want to log out? Click <a href="logout.php">here</a>.
+							Want to go back? Click <a href="index.html">here</a>.
 						</p>
 						
 						    
-    {
+						    <br />
+						    <p>Here comes the data:</p>
+    
     	<?php
     	//Creating a query to send to the database.
     	$myQuery = "select * from $table_name order by id";
@@ -40,15 +43,16 @@ mysqli_select_db('$DB_NAME') or die("Can't select the Database.");
 		
     	//No CRUD functionality here, we're just iterating things from database.
     	while ($row = mysqli_fetch_array($results))
+		//Quite honestly, I would add in the mailto: and teL: protocals, but concatenating things in PHP makes me want to shoot myself.
         
-       echo "<p>"."ID:".$row['id']." ".$row['name']." "."mailto:".$row['email']."tel:".$row['phone'].
+       echo "<p>"."ID:".$row['id']." ".$row['name']." " .$row['email']." ".$row['phone'].
         "</p>";
 		
 		mysqli_close($dbc);
 		
 		?>
 
-    }
+    
 
 	</body>
 	
