@@ -19,8 +19,8 @@
 
 	</head>
 	<body>
-		<?php require_once(connectvars.php); 
-		
+		<?php
+		require_once (connectvars . php);
 		?>
 		<div class="row">
 			<div class="large-12 columns">
@@ -83,16 +83,23 @@
 						<p>
 							Here is a password protected form in which one can look at my personal business contacts. No peeking!
 						</p>
-						
+
 						<form name="loginform" method="post" action="checklogin.php">
-							<p>Username:</p><input name="username" type="text" id="username">
-							
-							<p>Password:</p><input name="password" type="password" id="password">
-							
+							<p>
+								Username:
+							</p>
+							<input name="username" type="text" id="username">
+
+							<p>
+								Password:
+							</p>
+							<input name="password" type="password" id="password">
+
 							<input type="submit" name="submit" value="submit">
-							
+
 						</form>
 
+						
 					</div>
 
 				</div>

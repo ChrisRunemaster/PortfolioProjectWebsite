@@ -32,9 +32,12 @@ $count = mysql_num_rows($result);
 if($count == 1)
 {
 		//Success! Let's register these to the session so the server knows who you are.
-		//This is some handy-dandy session code I found. It'll help for when we log out.
+		//This is some handy-dandy session code I found. It'll help for when we want to log out.
 		session_register("username");
 		session_register("password");
+		//Redirect to the login page to display the sensitive data. Lazy solution? Yes.
+		//The data isn't that special!
+		header("location:loginsuccess.php");
 		
 	
 }
@@ -43,5 +46,4 @@ else {
 }
 	 
 
-ob_end_flush();
 ?>
