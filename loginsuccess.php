@@ -45,7 +45,7 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
     	while ($row = mysqli_fetch_array($results))
 		//Quite honestly, I would add in the mailto: and teL: protocals, but concatenating things in PHP makes me want to shoot myself.
         
-       echo "<p>"."ID:".$row['id']." ".$row['name']." " .$row['email']." ".$row['phone'].
+       echo "<p>"."ID:".$row['id']." "."Name: ".$row['name']." "."Email: " .$row['email']." "."Phone: ".$row['phone'].
         "</p>";
 		
 		mysqli_close($dbc);
