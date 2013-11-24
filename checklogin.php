@@ -25,7 +25,7 @@ $password = mysqli_real_escape_string($dbc,$password);
 
 //Building our query, note the SHA1(). The password is encrypted, so we have to compare the two somehow!
 //We will then store this query into a result variable.
-$sql = "SELECT id FROM portfolio_user WHERE username = '$username' AND password = $password";
+$sql = "SELECT id FROM portfolio_user WHERE username = '$username' AND password = '$password'";
 
 $result = mysqli_query($dbc,$sql);
 

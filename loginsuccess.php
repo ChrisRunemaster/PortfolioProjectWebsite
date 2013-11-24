@@ -4,8 +4,6 @@ session_start();
 //If he is, he's allowed to be in.
 //Otherwise, kick him right back to the unauthorized page!
 
-session_start();
-require_once("authorize.php");
 if(isset($_SESSION['user_id']))
 {
     header("Location: login.php");
