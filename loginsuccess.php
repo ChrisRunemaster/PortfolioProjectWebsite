@@ -4,7 +4,7 @@ session_start();
 //If he is, he's allowed to be in.
 //Otherwise, kick him right back to the unauthorized page!
 
-if(isset($_SESSION['user_id']))
+if(!isset($_SESSION['user_id']))
 {
     header("Location: login.php");
     exit;
@@ -16,7 +16,7 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
 //mysqli_select_db("$DB_NAME", ) or die("Can't select the Database.");
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>	
 
 <html lang="en">
 	<head>
@@ -43,12 +43,16 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
 		$results = mysqli_query($dbc, $myQuery) or die("Cannot query Database.");
 		
     	//No CRUD functionality here, we're just iterating things from database.
-    	while ($row = mysqli_fetch_array($results))
+    	while ($row = mysqli_fetch_array($results)) {
 		//Quite honestly, I would add in the mailto: and teL: protocals, but concatenating things in PHP makes me want to shoot myself.
+		
+		$email = "<a href=mailto:".$row['email'].">".$row['email']."</a>";
+		$phone = "<a href=tel:".$row['phone'].">".$row['phone']."</a>";
         
-       echo "<p>"."ID:".$row['id']." "."Name: ".$row['name']." "."Email: " .$row['email']." "."Phone: ".$row['phone'].
+       echo "<p>"."ID:".$row['id']." "."Name: ".$row['name']." "."Email: " .$email." "."Phone: ".$phone.
         "</p>";
 		
+		}
 		mysqli_close($dbc);
 		
 		?>
