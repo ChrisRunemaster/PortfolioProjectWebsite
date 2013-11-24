@@ -1,13 +1,16 @@
 <?php
+session_start();
 //Is our user authorized to view this page?
 //If he is, he's allowed to be in.
 //Otherwise, kick him right back to the unauthorized page!
 
 session_start();
 require_once("authorize.php");
-/*if (!session_is_registered(username)) {
-	header("location:login.php");
-}*/
+if(isset($_SESSION['user_id']))
+{
+    header("Location: login.php");
+    exit;
+}
 require_once("connectvars.php");
 $table_name = portfolio_contacts;
 $dbc = mysqli_connect(DB_HOST,DB_USER,

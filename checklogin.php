@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Database things here!
 require_once("connectvars.php");
 //We might need the table name as well.
@@ -13,7 +14,7 @@ $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 //with the associated IDs.
 
 $username = $_POST['username'];
-$password = $_POST['password'];
+$password = SHA1($_POST['password']);
 
 //Some security to prevent SQL Injection.
 //This will trim all white space and put escape strings against SQL 'command keys'.
@@ -24,7 +25,7 @@ $password = mysqli_real_escape_string($dbc,$password);
 
 //Building our query, note the SHA1(). The password is encrypted, so we have to compare the two somehow!
 //We will then store this query into a result variable.
-$sql = "SELECT * FROM portfolio_user WHERE username = '$username' AND password = SHA1($password)";
+$sql = "SELECT id FROM portfolio_user WHERE username = '$username' AND password = $password";
 
 $result = mysqli_query($dbc,$sql);
 
@@ -32,21 +33,27 @@ $result = mysqli_query($dbc,$sql);
 $count = mysqli_num_rows($result);
 
 //Compare the number of rows. There should only be 1, because there is only 1 admin!
-/*if($count == 1)
+if($count == 1)
 {
 		//Success! Let's register these to the session so the server knows who you are.
 		//This is some handy-dandy session code I found. It'll help for when we want to log out.
-		session_register("username");
-		session_register("password");
+	while ($row = mysqli_fetch_array($result)) {
+	
+		//access the existing session created by the web server
+		session_start(); 
+		
+		//store the user id in the session object
+		$_SESSION['user_id'] = $row['id'];
 		//Redirect to the login page to display the sensitive data. Lazy solution? Yes.
 		//The data isn't that special!
 		header("location:loginsuccess.php");
+	}
 		
 	
 }
 else {
 	echo"You have entered the wrong username or password. Please try again.";
-}*/
+}
 
-
+mysqli_close($dbc);
 ?>
