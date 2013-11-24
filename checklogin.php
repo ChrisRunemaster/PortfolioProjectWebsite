@@ -1,4 +1,9 @@
 <?php
+/*
+ * Name: Chris Rooney
+ * File: Checklogin.php
+ * This validates the user and redirects them to the proper page.
+ */
 session_start();
 //Database things here!
 require_once("connectvars.php");
