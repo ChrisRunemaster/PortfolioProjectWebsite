@@ -28,7 +28,7 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
 		<br />
 		<p>Please forgive me for the barebones look of this page. It's completely hidden from the public eye if that helps my case!</p>
 		<p>
-							Want to go back? Click <a href="index.html">here</a>.
+							Want to go back? Click <a href="logout.php">here</a>.
 						</p>
 						
 						    
