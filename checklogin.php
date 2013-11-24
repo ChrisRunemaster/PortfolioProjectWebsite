@@ -27,7 +27,7 @@ $password = mysqli_real_escape_string($dbc,$password);
 //We will then store this query into a result variable.
 $sql = "SELECT id FROM portfolio_user WHERE username = '$username' AND password = '$password'";
 
-$result = mysqli_query($dbc,$sql);
+$result = mysqli_query($dbc,$sql) or die("Cannot query Database.");
 
 //We're going to count the results...
 $count = mysqli_num_rows($result);

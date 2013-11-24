@@ -40,7 +40,7 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
     	$myQuery = "select * from $table_name order by id";
     	
 		//Execute the command.
-		$results = mysqli_query($dbc, $myQuery);
+		$results = mysqli_query($dbc, $myQuery) or die("Cannot query Database.");
 		
     	//No CRUD functionality here, we're just iterating things from database.
     	while ($row = mysqli_fetch_array($results))
