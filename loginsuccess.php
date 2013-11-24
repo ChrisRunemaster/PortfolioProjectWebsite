@@ -44,8 +44,9 @@ $dbc = mysqli_connect(DB_HOST,DB_USER,
 		
     	//No CRUD functionality here, we're just iterating things from database.
     	while ($row = mysqli_fetch_array($results)) {
-		//Quite honestly, I would add in the mailto: and teL: protocals, but concatenating things in PHP makes me want to shoot myself.
 		
+		
+		//Easy way out. We'll do the messy concatenation here! Clever, isn't it?
 		$email = "<a href=mailto:".$row['email'].">".$row['email']."</a>";
 		$phone = "<a href=tel:".$row['phone'].">".$row['phone']."</a>";
         
